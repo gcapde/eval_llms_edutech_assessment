@@ -11,14 +11,6 @@ import matplotlib.pyplot as plt
 import re
 # import hashlib
 
-def ejecutar_prueba(output_path):
-    comando = ["promptfoo", "eval", "--output", output_path]
-    try:
-        resultado = subprocess.run(comando, check=True, capture_output=True, text=True)
-        print("Prueba ejecutada exitosamente.")
-    except subprocess.CalledProcessError as e:
-        print(f"Error al ejecutar la prueba: {e}")
-
 # Función para crear un hash corto de una etiqueta larga
 def shorten_label(label, length=10):
     # return hashlib.sha256(label.encode()).hexdigest()[:length]
@@ -157,10 +149,8 @@ def analizar_output(ruta_output):
 if __name__ == "__main__":
     print("Run promptfoo Eval.")
 
-    # output = "outputs/1pregunta_output.json"
-    output = "outputs/longRun.json"
-    # output = "outputs/longRun_v2.json"
-    # output = "outputs/longRun_v2_llama70b.json"
-    # output = "outputs/longRun_v2_openAI.json"
-    # ejecutar_prueba(output)
+    output = "experiments_results.json"
+    # output = "experiments_results_llama70b.json"
+    # output = "experiments_results_openAI.json"
+    # output = "experiments_results_inverted_prompt.json"
     analizar_output(output)
