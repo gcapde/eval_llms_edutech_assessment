@@ -1,0 +1,8 @@
+description: "Experiments LLMs - URUCON 2024"
+
+providers:
+  [ollama:chat:mistral:7b, ollama:chat:phi3:14b, ollama:chat:qwen2, ollama:chat:qwen2:72b, ollama:chat:llama3, ollama:chat:llama3:70b, openai:chat:gpt-4o, openai:chat:gpt-4-turbo-2024-04-09, openai:gpt-3.5-turbo-0125]
+
+prompts: prompts_URUCON.txt
+
+tests: dataset_URUCON_asserts.csv
